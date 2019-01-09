@@ -1,12 +1,18 @@
 {
   "name": "addapptables-ui",
   "version": "1.0.0",
-  "private": true,
+  "description": "addapptables-ui",
+  "main": "dist/index.js",
+  "repository": "https://github.com/addapptables/addapptables-ui.git",
+  "author": "dev@addapptables.com",
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "build-dev": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "precommit": "yarn lint"
   },
   "dependencies": {
     "@material-ui/core": "3.7.1",
@@ -15,7 +21,6 @@
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts-ts": "3.1.0",
     "redux": "^4.0.1"
   },
   "devDependencies": {
@@ -25,6 +30,22 @@
     "@types/react-dom": "^16.0.11",
     "@types/react-redux": "^6.0.12",
     "@types/react-router-dom": "^4.3.1",
-    "typescript": "^3.2.2"
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   }
 }

@@ -1,17 +1,15 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { Header } from './components/header';
+// TODO: add scss
+import './styles/flexboxgrid.scss';
+import './styles/main.scss';
+import './styles/normalize.scss';
 
-import { Home } from './pages/home';
+import { In } from './In';
+import { Out } from './Out';
 
-const App = () => (
-  <Router>
-    <div>
-      <Header />
-      <Route exact={true} path='/' component={Home} />
-    </div>
-  </Router>
-);
+const isIn = true;
+
+const App = () => isIn ? <In /> : <Out />;
 
 export default App;

@@ -1,4 +1,7 @@
 import * as React from 'react';
+import InsertComment from '@material-ui/icons/InsertComment';
+import OndemandVideo from '@material-ui/icons/OndemandVideo';
+import AddAPhoto from '@material-ui/icons/AddAPhoto';
 
 import { ListPost } from '../../components/ListPost';
 import { CreatePost } from '../../components/CreatePost';
@@ -27,10 +30,25 @@ const news: any = {
     top: '64px',
 };
 
+const items = [
+    {
+        icon: <InsertComment />,
+        text: 'Blogs',
+    },
+    {
+        icon: <AddAPhoto />,
+        text: 'Pictures',
+    },
+    {
+        icon: <OndemandVideo />,
+        text: 'Videos',
+    },
+];
+
 export const Home = () => (
     <div style={{ display: 'flex' }}>
         <div style={menu}>
-            <Menu />
+            <Menu items={items} />
         </div>
         <div style={{ flex: 6 }}>
             <CreatePost />

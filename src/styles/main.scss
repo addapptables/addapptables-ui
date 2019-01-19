@@ -13,7 +13,8 @@
 }
 
 .chat {
-    height: calc(100vh - 64px);
+    // height: calc(100vh - 64px);
+    height: 88.8vh;
     position: sticky;
     margin-top: 64px;
     overflow-y: auto;
@@ -31,4 +32,12 @@
     flex-shrink: 0;
     background: green;
     top: 50px;
+}
+
+.temp-letter-green {
+    color: #07e61ad0;
+}
+
+.temp-letter-red {
+    color: #ff0808d0;
 }
